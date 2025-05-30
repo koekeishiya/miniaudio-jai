@@ -96,7 +96,14 @@ generate_bindings :: (args: [] string, minimum_os_version: type_of(Build_Options
         generate_compile_time_struct_checks = false;
     }
 
-    output_filename := "bindings.jai";
+    #if OS == .WINDOWS {
+        output_filename := "windows.jai";
+    } else #if OS == .LINUX || OS == .MACOS {
+        output_filename := "unix.jai";
+    } else {
+        #assert false;
+    }
+
     return generate_bindings(options, output_filename);
 }
 
