@@ -1,7 +1,7 @@
 ## jai bindings for miniaudio
 
 miniaudio version: v0.11.22</br>
-jai version: beta 0.2.014
+jai version: beta 0.2.015
 
 ### Current operating system supported
 
