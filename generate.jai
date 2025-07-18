@@ -41,7 +41,6 @@ generate_bindings :: (args: [] string, minimum_os_version: type_of(Build_Options
             assert(false);
     }
 
-
     if compile {
         source_file := tprint("%/miniaudio.c", SOURCE_PATH);
 
