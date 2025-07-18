@@ -6590,14 +6590,4 @@ ma_sound_group_get_time_in_pcm_frames :: (pGroup: *ma_sound_group) -> ma_uint64 
 
 #import "Basic"; // For push_context
 
-
-#if OS == .WINDOWS {
-    miniaudio :: #library "windows/miniaudio";
-} else #if OS == .LINUX {
-    miniaudio :: #library "linux/miniaudio";
-} else #if OS == .MACOS {
-    miniaudio :: #library "macos/miniaudio";
-} else {
-    #assert false;
-}
-
+miniaudio :: #library "macos/miniaudio";
